@@ -1,0 +1,1 @@
+---- name: install and start apache  hosts: all  vars:    http_port: 80    max_clients: 200  remote_user: root  tasks:  - name: install httpd    yum: pkg=httpd state=latest  - name: start httpd    service: name=httpd state=running
